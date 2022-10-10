@@ -20,3 +20,30 @@ const sayHello = (str) => {
         }
         return false
     }
+
+    const isEven = (num) => {
+        if (num % 2 === 0) {
+            return true
+        }
+        return false
+    }
+
+function isVowel(x) {
+
+    if (x == "A" || x == "E" || x == "I" || x == "O" || x == "U" || x=='a' || x=='e' || x=='i' || x=='o' || x=='u') {
+        return true
+    }
+else {
+    return false
+    }
+}
+
+const add = (x, y) => {
+    let z = x + y
+    if (z = x+y) {
+        return z
+    }
+    else {
+        return NaN
+    }
+}

@@ -74,3 +74,36 @@ describe('isFive', function () {
         expect(isFive('5')).toBe(false)
     });
 })
+
+describe('isEven', function () {
+    it('should be a function', function () {
+        expect(typeof isEven).toBe('function')
+    });
+    it('should return a boolean', function () {
+        expect(typeof isEven()).toBe('boolean')
+    });
+})
+
+describe('isVowel', function () {
+    it('should be a function', function () {
+        expect(typeof isVowel).toBe('function')
+    });
+    it('should be a boolean', function () {
+        expect(typeof isVowel()).toBe('boolean')
+    });
+    it('should be a vowel', function () {
+        expect(isVowel('a')).toBe(true)
+    });
+})
+
+describe('add', function () {
+    it('should be a function', function () {
+        expect(typeof add).toBe('function')
+    });
+    it('should be a number', function () {
+        expect(typeof add()).toBe('number')
+    });
+    it('should return a number', function () {
+        expect(add(2, 5)).toBe(7)
+    });
+})
