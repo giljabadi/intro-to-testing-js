@@ -4,16 +4,19 @@ const helloWorld = () => "Hello, World!"
 const sayHello = (str) => {
     if (str == undefined) {
         return "Hello, World!"
-    }
-    else if (str == true) {
+    } else if (str == true) {
         return "Hello, World!"
-    }
-    else if (str == false) {
+    } else if (str == false) {
         return "Hello, World!"
-    }
-    else if (str == 2) {
+    } else if (str == 2) {
         return "Hello, World!"
     }
     return "Hello, " + str + "!"
 }
 
+    const isFive = (num) => {
+        if (num === 5) {
+            return true
+        }
+        return false
+    }

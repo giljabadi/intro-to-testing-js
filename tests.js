@@ -49,18 +49,28 @@ describe('sayHello', function() {
         expect(sayHello("")).toBe("Hello, World!")
     });
     it('should never return a number', function () {
-        expect(sayHello()).not.toBe(typeof 0)
+        expect(typeof sayHello()).not.toBe('number')
     });
     it('should never return an array', function () {
-        expect(sayHello()).not.toBe(Array.isArray() == true)
-    });
-    it('should never return an object', function () {
-        expect(sayHello()).not.toBe(typeof {})
+        expect(typeof sayHello()).not.toBe('object')
     });
     it('should never return a function', function () {
-        expect(sayHello()).not.toBe(typeof function () {})
+        expect(typeof sayHello()).not.toBe('function')
     });
     it("should never return 'undefined'", function() {
-        expect(sayHello()).not.toBe(undefined);
+        expect(typeof sayHello()).not.toBe('undefined');
     });
 });
+
+describe('isFive', function () {
+    it('does function exist', function () {
+        expect(typeof isFive).toBe('function')
+    });
+    it('should be a boolean', function () {
+        expect(typeof isFive()).toBe('boolean')
+    });
+    it('should return true', function () {
+        expect(isFive(5)).toBe(true)
+        expect(isFive('5')).toBe(false)
+    });
+})
