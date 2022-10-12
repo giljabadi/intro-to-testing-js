@@ -98,10 +98,15 @@ describe('isEven', function () {
     it('should return false if infinity is inputted', function () {
         expect(isEven(Infinity)).toBe(false)
     });
-    it('should ', function () {
-        
+    it('should return false with a boolean input ', function () {
+        expect(isEven(true)).toBe(false);
     });
-
+    it('should return false with a boolean input ', function () {
+        expect(isEven(false)).toBe(false);
+    });
+    it('should return false without an argument', function () {
+        expect(isEven()).toBe(false)
+    });
 
 })
 
@@ -115,6 +120,27 @@ describe('isVowel', function () {
     it('should be a vowel', function () {
         expect(isVowel('a')).toBe(true)
     });
+    it('should be a vowel', function () {
+        expect(isVowel('A')).toBe(true)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel('y')).toBe(false)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel('4')).toBe(false)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel(true)).toBe(false)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel(false)).toBe(false)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel('banana')).toBe(false)
+    });
+    it('should be a vowel', function () {
+        expect(isVowel()).toBe(false)
+    });
 })
 
 describe('add', function () {
@@ -124,7 +150,28 @@ describe('add', function () {
     it('should be a number', function () {
         expect(typeof add()).toBe('number')
     });
-    it('should return a number', function () {
-        expect(add(2, 5)).toBe(7)
+    it('should return 5', function () {
+        expect(add(2, 3)).toBe(5)
     });
+    it('should return -12', function () {
+        expect(add(-3, -9)).toBe(-12)
+    });
+    it('should return 11', function () {
+        expect(add("5", 6)).toBe(11)
+    });
+    it('should return 6', function () {
+        expect(add("-4", "10")).toBe(6)
+    });
+    it('banana split should return NaN', function () {
+        expect(add("banana", "split")).toBeNaN()
+    });
+    it('2apples should return NaN', function () {
+        expect(add(2, "apples")).toBeNaN()
+    });
+    it('empty input should return NaN', function () {
+        expect(add()).toBeNaN()
+    });
+
+
+
 })

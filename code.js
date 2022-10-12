@@ -22,6 +22,9 @@ const sayHello = (str) => {
     }
 
     const isEven = (num) => {
+    if (num === false) {
+            return false
+        }
         if (num % 2 === 0) {
             return true
         }
@@ -39,11 +42,9 @@ else {
 }
 
 const add = (x, y) => {
-    let z = x + y
-    if (z = x+y) {
-        return z
-    }
-    else {
+    if (isNaN(x) === false || isNaN(y) === false) {
+        return parseFloat(x)+parseFloat(y)
+    } else {
         return NaN
     }
 }
