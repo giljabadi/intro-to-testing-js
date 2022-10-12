@@ -8,7 +8,7 @@ const sayHello = (str) => {
         return "Hello, World!"
     } else if (str == false) {
         return "Hello, World!"
-    } else if (str == 2) {
+    } else if (typeof str == 'number') {
         return "Hello, World!"
     }
     return "Hello, " + str + "!"
